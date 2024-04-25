@@ -44,12 +44,13 @@ function App() {
 
         setWeatherCondition(resData?.weather[0]?.main);
         setWeather(obj);
-        setCity("");
+        
       } else if (resData?.cod == 404) {
         setError(true);
       } else {
         setError(false);
       }
+      setCity("");
     } catch (error) {
       console.log(100, error);
     }finally{
